@@ -1,0 +1,6 @@
+
+
+
+modules.export = RelationalModel.extend({
+	
+});

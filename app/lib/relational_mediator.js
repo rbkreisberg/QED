@@ -1,136 +1,24 @@
 //RelationalMediator
 
-Feature = Backbone.RelationalModel.extend({
-    relations: [
-        {
-            type: 'HasMany',
-            key: 'association',
-            relatedModel: 'Association',
-            reverseRelation: {
-                key: 'feature'
-            }
-        },
- 		{
-            type: 'HasMany',
-            key: 'measurement',
-            relatedModel: 'Measurement',
-            reverseRelation: {
-                key: 'feature'
-            }
-        },
-		{
-            type: 'HasOne',
-            key: 'label',
-            relatedModel: 'FeatureLabel',
-            reverseRelation: {
-                key: 'feature'
+module.exports = function RelationalMediator(){
+	var binder = new Backbone.EventBinder();
 
-            }
-        }
-    ]
-});
 
-// A link object between 'Person' and 'Company', to achieve many-to-many relations.
-Association = Backbone.RelationalModel.extend({
- defaults: {
-        features:[],
-        values:[],
-        directed : false
-    },
 
-    target : function() {
-    	return directed ? 
-    		 			 features[1] : 
-    		 			 null ;
-    },
+};
 
-    source : function() {
-    	return directed ? 
-    					 features[0] :
-    					 null;
-    },
+//Pathways is many FeatureLabels.
+//FeatureLabel is something like TP53.  It can map to many Features.  It can map to many Pathways
+//Feature is something like C:GEXP:TP53:chrX:start:stop:strand
+//Measurement is the instance of a feature for a particular dataset, 
+//Condition describes the unique condition/disease of the measurement
+//SampleMeasurement is one sample measurement for one feature for a unique condition.
 
-    features : function() {
-    	return this.get('features');
-    },
+//Association is a pair of measurements with a set of associated values describing the association
 
-    values : function() {
-    	return this.get('values');
-    }
+//AssociationList is a collection of Associations
+//MeasurementList is a collection of Measurements
 
-});
-
-// sample is many-to-many with measurement.
-// create a go-between "MeasurementInstance" for that relationship.
-Sample = Backbone.RelationalModel.extend({
-	relations: [
-		{
-			type: 'HasMany',
-			key:'measurement_instances',
-			relatedModel: 'MeasurementInstance',
-			reverseRelation: {
-				key:'sample'
-			}	
-		}
-	]
-});
-
-MeasurementInstance = Backbone.RelationalModel.extend({
-
-});
-
-Measurement = Backbone.RelationalModel.extend({
-	relations: [
-		{
-			type: 'HasMany',
-			key:'measurement_instances',
-			relatedModel: 'MeasurementInstance',
-			reverseRelation: {
-				key:'measurement'
-			}	
-		}
-	]
-});
-
-FeatureLabel = Backbone.RelationalModel.extend({
-		relations: [
-			{
-				type : 'HasMany',
-				key : 'pathway_label_instance',
-				relatedModel: 'PathwayLabelInstance',
-				reverseRelation: {
-					key: 'label'
-				}
-			}
-		]
-});
-
-Pathway = Backbone.RelationalModel.extend({
-		relations: [
-			{
-				type : 'HasMany',
-				key : 'pathway_label_instance',
-				relatedModel: 'PathwayLabelInstance',
-				reverseRelation: {
-					key: 'pathway'
-				}
-			}
-		]
-});
-
-//cancer type, disease, etc.
-Condition = Backbone.RelationalModel.extend({
-    relations: [
-        {
-            type: 'HasMany',
-            key: 'measurements',
-            relatedModel: 'Measurement',
-            reverseRelation: {
-                key: 'condition'
-            }
-        }
-    ]
-});
 
 Term = Backbone.RelationalModel.extend({
 	subModelTypes: {
