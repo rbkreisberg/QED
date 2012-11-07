@@ -1,11 +1,44 @@
 //RelationalMediator
 
-module.exports = function RelationalMediator(){
-	var binder = new Backbone.EventBinder();
+Backbone.RelationalMediator = (function(Backbone, _){
+  "use strict";
 
+	this.binder = new Backbone.EventBinder();
+	this.models = new Array();
 
+   // Constructor function
+  var RelationalMediator = function(){
+    this._eventBindings = [];
+  };
 
-};
+  // Copy the `extend` function used by Backbone's classes
+  RelationalMediator.extend = Backbone.View.extend;
+
+  // Extend the RelatinalMediator with additional methods
+  _.extend(RelationalMediator.prototype, {
+
+    //identify the general data type 
+    identifyFeatureType: function(/* args... */) {
+     
+     return null;
+    },
+
+    addModel  :function(model,) {
+		var feature_type;
+		if (feature_type = this.identifyFeatureType())
+
+		this.binder.bindTo('destroy', function())
+	},
+
+	addCollection  : function(models){
+
+	}
+   
+  });
+
+  return RelationalMediator;
+})(Backbone, _);
+
 
 //Pathways is many FeatureLabels.
 //FeatureLabel is something like TP53.  It can map to many Features.  It can map to many Pathways
@@ -18,37 +51,3 @@ module.exports = function RelationalMediator(){
 
 //AssociationList is a collection of Associations
 //MeasurementList is a collection of Measurements
-
-
-Term = Backbone.RelationalModel.extend({
-	subModelTypes: {
-			'condition' : 'Condition',
-			'feature_label' : 'FeatureLabel'
-	}
-	relations: [
-			type: 'hasMany',
-			key : 'LiteratureTags',
-			relatedModel : 'Tag',
-			reverseRelation : {
-				key : 'term'
-			}
-	]
-});
-
-Literature = Backbone.RelationalModel.extend( {
-	relations : [
-		{
-			type:'hasMany',
-			key: 'LiteratureTags',
-			relatedModel: 'Tag',
-			reverseRelation : {
-				key : 'literature'
-			}
-		}
-	]
-});
-
-// a tag for a particular piece of literature
-LiteratureTag = Backbone.RelationalModel.extend({
-
-});
