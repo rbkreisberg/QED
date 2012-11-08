@@ -4,7 +4,7 @@ Backbone.RelationalMediator = (function(Backbone, _){
   "use strict";
 
 	this.binder = new Backbone.EventBinder();
-	this.models = new Array();
+	this.models = new Backbone.Collection();
 
    // Constructor function
   var RelationalMediator = function(){
@@ -23,15 +23,39 @@ Backbone.RelationalMediator = (function(Backbone, _){
      return null;
     },
 
-    addModel  :function(model,) {
-		var feature_type;
-		if (feature_type = this.identifyFeatureType())
+    addModel  :function(model, feature_type) {
+    	var me = this;
+		if (_.isUndefined(feature_type)) {
+			feature_type = this.identifyFeatureType(model)
+		}
+		var rel_model = feature_type.findOrCreate(model.toJSON()));
+		this.models.add(rel_model);
 
-		this.binder.bindTo('destroy', function())
+		me.binder.bindTo(model,'change', function(obj) {
+			rel_model.change();
+		}, this);
+
+		me.binder.bindTo(model,'selected', function(obj) {
+			rel_model.select();
+		}, this);
+
+		me.binder.bindTo(model,'hidden', function() {
+			rel_model.hide();
+		}, this);
+
+		me.binder.bindTo(model,'unhidden', function() {
+			rel_model.unhide();
+		}, this);
+
+		me.binder.bindTo(model,'destroy', function(){
+			rel_model.destroy();
+		}, this);
 	},
 
-	addCollection  : function(models){
-
+	addCollection  : function(collection){
+		var modelType = this.identifyFeatureType(collection.at(0));
+		var addModel = function(model) { this.addModel(model,modelType);};
+		collection.each(addModel);
 	}
    
   });
