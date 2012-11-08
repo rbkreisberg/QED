@@ -53,5 +53,20 @@ Feature = Model.extend({
                 type: 'HasMany'
             }
         }
-    ]
+    ],
+
+    //setup bindings to relations
+     initialize: function() {
+        this.bind('selected:label selected:measurement selected:association',function(obj){
+
+        });
+
+        this.bind('hidden:label hidden:measurement hidden:association',function(obj){
+
+        });
+
+        this.bind('unhidden:label unhidden:measurement unhidden:association',function(obj){
+
+        });
+    }
 });
