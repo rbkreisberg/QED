@@ -1,0 +1,631 @@
+qed.lookups = {
+	chromosomes : [
+		{id: 1	, length: 247249719},
+		{id: 2	, length: 242951149},
+		{id: 3	, length: 199501827},
+		{id: 4	, length: 191273063},
+		{id: 5	, length: 180857866},
+		{id: 6	, length: 170899992},
+		{id: 7	, length: 158821424},
+		{id: 8	, length: 146274826},
+		{id: 9	, length: 140273252},
+		{id: 10, length: 	135374737},
+		{id: 11, length: 	134452384},
+		{id: 12, length: 	132349534},
+		{id: 13, length: 	114142980},
+		{id: 14, length: 	106368585},
+		{id: 15, length: 	100338915},
+		{id: 16, length: 	88827254},
+		{id: 17, length: 	78774742},
+		{id: 18, length: 	76117153},
+		{id: 19, length: 	63811651},
+		{id: 20, length: 	62435964},
+		{id: 21, length: 	46944323},
+		{id: 22, length: 	49691432},
+		{id: X	, length: 154913754},
+		{id: Y	, length: 57772954}
+	],
+
+	feature_labels: [
+{ "id": "C:SURV:Alcohol_Consumption:F::::", "label": "[F] Alcohol Consumption (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Alcohol_Consumption:M::::", "label": "[M] Alcohol Consumption (SURV:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:Antenatan_Steroids_Indication:M::::iugr", "label": "[M] Antenatan Steroids Indication:iugr (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Antenatan_Steroids_Indication:M::::pih", "label": "[M] Antenatan Steroids Indication:pih (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Antenatan_Steroids_Indication:M::::pprom", "label": "[M] Antenatan Steroids Indication:pprom (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Antenatan_Steroids_Indication:M::::pre-eclampsia", "label": "[M] Antenatan Steroids Indication:pre-eclampsia (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Antenatan_Steroids_Indication:M::::ptb", "label": "[M] Antenatan Steroids Indication:ptb (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Antenatan_Steroids_Indication:M::::ptl", "label": "[M] Antenatan Steroids Indication:ptl (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Antenatan_Steroids_Types:M::::betamethasone", "label": "[M] Antenatan Steroids Types:betamethasone (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Antenatan_Steroids_Types:M::::terbutaline", "label": "[M] Antenatan Steroids Types:terbutaline (CLIN:B)", "Occured" : "During"}
+{ "id": "C:CLIN:Assisted_Pregnancy:M::::", "label": "[M] Assisted Pregnancy (CLIN:C)", "Occured" : "Before"}
+{ "id": "B:SURV:Autoimmune_Conditions:M::::", "label": "[M] Autoimmune Conditions (SURV:B)", "Occured" : "Before"}
+{ "id": "N:SURV:BMI:M::::", "label": "[M] BMI (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Birth_Weight_Grams:F::::", "label": "[F] Birth Weight Grams (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Birth_Weight_Grams:M::::", "label": "[M] Birth Weight Grams (SURV:N)", "Occured" : "Before"}
+{ "id": "N:CLIN:Birth_Weight_Grams:NB::::", "label": "[NB] Birth Weight Grams (CLIN:N)", "Occured" : "After"}
+{ "id": "B:SURV:Birth_Weight_Unknown:F::::", "label": "[F] Birth Weight Unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Birth_Weight_Unknown:M::::", "label": "[M] Birth Weight Unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "N:SURV:Birth_Weight__Birth_Weight_Ounces:F::::", "label": "[F] Birth Weight Ounces (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Birth_Weight__Birth_Weight_Ounces:M::::", "label": "[M] Birth Weight Ounces (SURV:N)", "Occured" : "Before"}
+{ "id": "N:CLIN:Birth_Weight__Birth_Weight_Ounces:NB::::", "label": "[NB] Birth Weight Ounces (CLIN:N)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::breech", "label": "[M] C-Section Other Reason:breech (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::elective", "label": "[M] C-Section Other Reason:elective (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::failure_to_descend", "label": "[M] C-Section Other Reason:failure to descend (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::hellp", "label": "[M] C-Section Other Reason:hellp (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::iugr", "label": "[M] C-Section Other Reason:iugr (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::non-reassuring_fetal_heart_rate", "label": "[M] C-Section Other Reason:non-reassuring fetal heart rate (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::oligohydramnios", "label": "[M] C-Section Other Reason:oligohydramnios (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::pih", "label": "[M] C-Section Other Reason:pih (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::placenta_previa", "label": "[M] C-Section Other Reason:placenta previa (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::placental_abruption", "label": "[M] C-Section Other Reason:placental abruption (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::pprom", "label": "[M] C-Section Other Reason:pprom (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::pprom_breech", "label": "[M] C-Section Other Reason:pprom breech (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::pre-eclampsia", "label": "[M] C-Section Other Reason:pre-eclampsia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::pre-term_labor_breech", "label": "[M] C-Section Other Reason:pre-term labor breech (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::previous_myomectomy", "label": "[M] C-Section Other Reason:previous myomectomy (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::prom", "label": "[M] C-Section Other Reason:prom (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::ptl", "label": "[M] C-Section Other Reason:ptl (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::srom", "label": "[M] C-Section Other Reason:srom (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:C-Section_Other_Reason:M::::twins", "label": "[M] C-Section Other Reason:twins (CLIN:B)", "Occured" : "After"}
+{ "id": "C:CLIN:C-Section_Type:M::::", "label": "[M] C-Section Type (CLIN:C)", "Occured" : "After"}
+{ "id": "B:SURV:Cardiac:M::::", "label": "[M] Cardiac (SURV:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Cervical_Cerclage:M::::", "label": "[M] Cervical Cerclage (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Chorioamnionitis_during_delivery:M::::", "label": "[M] Chorioamnionitis during delivery (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::23_wks_gestation", "label": "[NB] Confirmed Diagnosis:23 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::24_wks_gestation", "label": "[NB] Confirmed Diagnosis:24 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::26_wks_gestation", "label": "[NB] Confirmed Diagnosis:26 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::27_wks_gestation", "label": "[NB] Confirmed Diagnosis:27 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::29_wks_gestation", "label": "[NB] Confirmed Diagnosis:29 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::30_wks_gestation", "label": "[NB] Confirmed Diagnosis:30 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::31_wks_gestation", "label": "[NB] Confirmed Diagnosis:31 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::32_wks_gestation", "label": "[NB] Confirmed Diagnosis:32 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::33_wks_gestation", "label": "[NB] Confirmed Diagnosis:33 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::34_wks_gestation", "label": "[NB] Confirmed Diagnosis:34 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::35_wks_gestation", "label": "[NB] Confirmed Diagnosis:35 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::36_wks_gestation", "label": "[NB] Confirmed Diagnosis:36 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::37_wks_gestation", "label": "[NB] Confirmed Diagnosis:37 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::39_wks_gestation", "label": "[NB] Confirmed Diagnosis:39 wks gestation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::abdominal_distention", "label": "[NB] Confirmed Diagnosis:abdominal distention (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::abo_incompatibility", "label": "[NB] Confirmed Diagnosis:abo incompatibility (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::acidosis", "label": "[NB] Confirmed Diagnosis:acidosis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::alkaline_phosphate_increase", "label": "[NB] Confirmed Diagnosis:alkaline phosphate increase (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::anemia", "label": "[NB] Confirmed Diagnosis:anemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::aorto-pulmonary_collateral_vessels", "label": "[NB] Confirmed Diagnosis:aorto-pulmonary collateral vessels (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::apnea", "label": "[NB] Confirmed Diagnosis:apnea (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::asd", "label": "[NB] Confirmed Diagnosis:asd (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::atelectasis", "label": "[NB] Confirmed Diagnosis:atelectasis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::bleeding_diathesis", "label": "[NB] Confirmed Diagnosis:bleeding diathesis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::bowel_perforation", "label": "[NB] Confirmed Diagnosis:bowel perforation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::bradycardia_events", "label": "[NB] Confirmed Diagnosis:bradycardia events (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::bronchopulmonary_dysplasia", "label": "[NB] Confirmed Diagnosis:bronchopulmonary dysplasia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::bun_>25", "label": "[NB] Confirmed Diagnosis:bun >25 (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::candidiasis", "label": "[NB] Confirmed Diagnosis:candidiasis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::choroid_plexus_cyst", "label": "[NB] Confirmed Diagnosis:choroid plexus cyst (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::conjunctivitis", "label": "[NB] Confirmed Diagnosis:conjunctivitis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::cyanotic_episodes", "label": "[NB] Confirmed Diagnosis:cyanotic episodes (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::desaturation_events", "label": "[NB] Confirmed Diagnosis:desaturation events (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::diaper_dermatitis", "label": "[NB] Confirmed Diagnosis:diaper dermatitis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::dysmorphism", "label": "[NB] Confirmed Diagnosis:dysmorphism (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::edema", "label": "[NB] Confirmed Diagnosis:edema (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::excess_periodic_breathing", "label": "[NB] Confirmed Diagnosis:excess periodic breathing (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::failed_car_seat_challenge", "label": "[NB] Confirmed Diagnosis:failed car seat challenge (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::gastroesophageal_reflux", "label": "[NB] Confirmed Diagnosis:gastroesophageal reflux (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hemangioma", "label": "[NB] Confirmed Diagnosis:hemangioma (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hematochezia", "label": "[NB] Confirmed Diagnosis:hematochezia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hyperbilirubinemia", "label": "[NB] Confirmed Diagnosis:hyperbilirubinemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypercalcemia", "label": "[NB] Confirmed Diagnosis:hypercalcemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hyperglycemia", "label": "[NB] Confirmed Diagnosis:hyperglycemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypermagnesemia", "label": "[NB] Confirmed Diagnosis:hypermagnesemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypernatremia", "label": "[NB] Confirmed Diagnosis:hypernatremia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hyperphosphatemia", "label": "[NB] Confirmed Diagnosis:hyperphosphatemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypoalbuminemia", "label": "[NB] Confirmed Diagnosis:hypoalbuminemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypocalcemia", "label": "[NB] Confirmed Diagnosis:hypocalcemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypoglycemia", "label": "[NB] Confirmed Diagnosis:hypoglycemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypokalemia", "label": "[NB] Confirmed Diagnosis:hypokalemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypolycemia", "label": "[NB] Confirmed Diagnosis:hypolycemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypomagnesemia", "label": "[NB] Confirmed Diagnosis:hypomagnesemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hyponatremia", "label": "[NB] Confirmed Diagnosis:hyponatremia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypophosphatemia", "label": "[NB] Confirmed Diagnosis:hypophosphatemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypotension", "label": "[NB] Confirmed Diagnosis:hypotension (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypothermia", "label": "[NB] Confirmed Diagnosis:hypothermia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::hypovolemia", "label": "[NB] Confirmed Diagnosis:hypovolemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::immature_retinal_vascularization", "label": "[NB] Confirmed Diagnosis:immature retinal vascularization (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::infant_of_diabetic_mother", "label": "[NB] Confirmed Diagnosis:infant of diabetic mother (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::iugr", "label": "[NB] Confirmed Diagnosis:iugr (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::iv_skin_infiltration", "label": "[NB] Confirmed Diagnosis:iv skin infiltration (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::ivh_grade_1", "label": "[NB] Confirmed Diagnosis:ivh grade 1 (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::jaundice", "label": "[NB] Confirmed Diagnosis:jaundice (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::large_for_gestational_age", "label": "[NB] Confirmed Diagnosis:large for gestational age (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::leukocytosis", "label": "[NB] Confirmed Diagnosis:leukocytosis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::leukopenia", "label": "[NB] Confirmed Diagnosis:leukopenia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::maternal_medication_exposure", "label": "[NB] Confirmed Diagnosis:maternal medication exposure (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::mitral_valve_regurgitation", "label": "[NB] Confirmed Diagnosis:mitral valve regurgitation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::monilia_rash", "label": "[NB] Confirmed Diagnosis:monilia rash (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::neutropenia", "label": "[NB] Confirmed Diagnosis:neutropenia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::o2_desaturation_w/feedings", "label": "[NB] Confirmed Diagnosis:o2 desaturation w/feedings (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::oliguria", "label": "[NB] Confirmed Diagnosis:oliguria (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::oro-pharyngeal_dysfunction", "label": "[NB] Confirmed Diagnosis:oro-pharyngeal dysfunction (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::pda", "label": "[NB] Confirmed Diagnosis:pda (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::perinatal_depression", "label": "[NB] Confirmed Diagnosis:perinatal depression (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::persistent_pulmonary_hypertension", "label": "[NB] Confirmed Diagnosis:persistent pulmonary hypertension (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::pfo", "label": "[NB] Confirmed Diagnosis:pfo (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::polycythemia_neonatorum", "label": "[NB] Confirmed Diagnosis:polycythemia neonatorum (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::poor_feeder", "label": "[NB] Confirmed Diagnosis:poor feeder (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::post-op_respiratory_insufficiency", "label": "[NB] Confirmed Diagnosis:post-op respiratory insufficiency (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::pulmonary_artery_branch_stenosis", "label": "[NB] Confirmed Diagnosis:pulmonary artery branch stenosis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::pulmonary_hemorrhage", "label": "[NB] Confirmed Diagnosis:pulmonary hemorrhage (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::respiratory_distress_syndrome", "label": "[NB] Confirmed Diagnosis:respiratory distress syndrome (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::respiratory_failure", "label": "[NB] Confirmed Diagnosis:respiratory failure (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::respiratory_insufficiency", "label": "[NB] Confirmed Diagnosis:respiratory insufficiency (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::rop_stage_i", "label": "[NB] Confirmed Diagnosis:rop stage i (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::rop_stage_ii", "label": "[NB] Confirmed Diagnosis:rop stage ii (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::s/p_discordant_intrauterine_growth", "label": "[NB] Confirmed Diagnosis:s/p discordant intrauterine growth (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::s/p_iugr", "label": "[NB] Confirmed Diagnosis:s/p iugr (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::sepsis", "label": "[NB] Confirmed Diagnosis:sepsis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::sepsis,_on_antimicrobials", "label": "[NB] Confirmed Diagnosis:sepsis, on antimicrobials (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::shock,_septic", "label": "[NB] Confirmed Diagnosis:shock, septic (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::skin_laceration", "label": "[NB] Confirmed Diagnosis:skin laceration (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::slow_transition_to_extrauterine_life", "label": "[NB] Confirmed Diagnosis:slow transition to extrauterine life (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::stridor", "label": "[NB] Confirmed Diagnosis:stridor (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::tachycardia", "label": "[NB] Confirmed Diagnosis:tachycardia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::tachypnea", "label": "[NB] Confirmed Diagnosis:tachypnea (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::temperature_instability", "label": "[NB] Confirmed Diagnosis:temperature instability (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::thrombocytopenia", "label": "[NB] Confirmed Diagnosis:thrombocytopenia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::thrombocytosis", "label": "[NB] Confirmed Diagnosis:thrombocytosis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::transient_tachypnea", "label": "[NB] Confirmed Diagnosis:transient tachypnea (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::tricuspid_regurgitation", "label": "[NB] Confirmed Diagnosis:tricuspid regurgitation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::triplet", "label": "[NB] Confirmed Diagnosis:triplet (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::twin", "label": "[NB] Confirmed Diagnosis:twin (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::twin_a", "label": "[NB] Confirmed Diagnosis:twin a (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::twin_b", "label": "[NB] Confirmed Diagnosis:twin b (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::twin_to_twin_transfusion_s/p_ablation", "label": "[NB] Confirmed Diagnosis:twin to twin transfusion s/p ablation (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::unconjugated_hyperbilirubinemia", "label": "[NB] Confirmed Diagnosis:unconjugated hyperbilirubinemia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::unknown_maternal_hepatitis_b_status", "label": "[NB] Confirmed Diagnosis:unknown maternal hepatitis b status (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::vertebral_and/or_rib_anomalies", "label": "[NB] Confirmed Diagnosis:vertebral and/or rib anomalies (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Confirmed_Diagnosis:NB::::vsd", "label": "[NB] Confirmed Diagnosis:vsd (CLIN:B)", "Occured" : "After"}
+{ "id": "C:SURV:Country_of_Birth:F::::", "label": "[F] Country of Birth (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Country_of_Birth:M::::", "label": "[M] Country of Birth (SURV:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:Cranial_Image_Worst_Grade:NB::::", "label": "[NB] Cranial Image Worst Grade (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Cranial_Imaging:NB::::", "label": "[NB] Cranial Imaging (CLIN:B)", "Occured" : "After"}
+{ "id": "N:CLIN:Current_Nutritional_Status:M::::", "label": "[M] Current Nutritional Status (CLIN:N)", "Occured" : "After"}
+{ "id": "B:SURV:Date_Quit_Drinking_Unknown:F::::", "label": "[F] Date Quit Drinking Unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Date_Quit_Drinking_Unknown:M::::", "label": "[M] Date Quit Drinking Unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Date_Quit_Smoking_Unknown:F::::", "label": "[F] Date Quit Smoking Unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Date_Quit_Smoking_Unknown:M::::", "label": "[M] Date Quit Smoking Unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::hellp", "label": "[M] Delivery Result of Other Reason:hellp (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::iugr", "label": "[M] Delivery Result of Other Reason:iugr (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::oligohydramnios", "label": "[M] Delivery Result of Other Reason:oligohydramnios (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::placenta_previa", "label": "[M] Delivery Result of Other Reason:placenta previa (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::placental_abruption", "label": "[M] Delivery Result of Other Reason:placental abruption (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::pprom", "label": "[M] Delivery Result of Other Reason:pprom (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::pprom_chorioamnionitis", "label": "[M] Delivery Result of Other Reason:pprom chorioamnionitis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::pprom_ptl", "label": "[M] Delivery Result of Other Reason:pprom ptl (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::pre-eclampsia", "label": "[M] Delivery Result of Other Reason:pre-eclampsia (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::pre-eclampsia_twins", "label": "[M] Delivery Result of Other Reason:pre-eclampsia twins (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::ptl", "label": "[M] Delivery Result of Other Reason:ptl (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::srom", "label": "[M] Delivery Result of Other Reason:srom (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Delivery_Result_of_Other_Reason:M::::twins", "label": "[M] Delivery Result of Other Reason:twins (CLIN:B)", "Occured" : "After"}
+{ "id": "N:SURV:Drinking_Frequency:F::::", "label": "[F] Drinking Frequency (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Drinking_Frequency:M::::", "label": "[M] Drinking Frequency (SURV:N)", "Occured" : "Before"}
+{ "id": "N:CLIN:Early_Onset_of_Labor_Number_of_Pregnancies:M::::", "label": "[M] Early Onset of Labor Number of Pregnancies (CLIN:N)", "Occured" : "Before"}
+{ "id": "C:CLIN:Early_Onset_of_Labor_in_Previous_Pregnancies:M::::", "label": "[M] Early Onset of Labor in Previous Pregnancies (CLIN:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Education_Level:F::::", "label": "[F] Education Level (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Education_Level:M::::", "label": "[M] Education Level (SURV:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:Endometriosis_Corrective_Surgery:M::::", "label": "[M] Endometriosis Corrective Surgery (CLIN:B)", "Occured" : "Before"}
+{ "id": "C:CLIN:Endometriosis:M::::", "label": "[M] Endometriosis (CLIN:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:Evidence_of_Infection_during_the_delivery:M::::", "label": "[M] Evidence of Infection during the delivery (CLIN:B)", "Occured" : "After"}
+{ "id": "C:CLIN:Evidence_of:NB::::", "label": "[NB] Evidence of (CLIN:C)", "Occured" : "After"}
+{ "id": "C:SURV:Exposure_to_Hazardous_Chemicals:F::::", "label": "[F] Exposure to Hazardous Chemicals (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Exposure_to_Hazardous_Chemicals:M::::", "label": "[M] Exposure to Hazardous Chemicals (SURV:C)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Autoimmune_Type:F::::rheumatoid_arthritis", "label": "[F] Family Autoimmune Type:rheumatoid arthritis (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Autoimmune_Type:M::::rheumatoid_arthritis", "label": "[M] Family Autoimmune Type:rheumatoid arthritis (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Autoimmune:M::::paternal", "label": "[M] Family Autoimmune:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::brain", "label": "[F] Family Cancer Type:brain (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::breast", "label": "[F] Family Cancer Type:breast (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::colon", "label": "[F] Family Cancer Type:colon (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::lung", "label": "[F] Family Cancer Type:lung (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::melanoma", "label": "[F] Family Cancer Type:melanoma (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::ovarian", "label": "[F] Family Cancer Type:ovarian (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::prostate", "label": "[F] Family Cancer Type:prostate (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::skin", "label": "[F] Family Cancer Type:skin (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:F::::unknown", "label": "[F] Family Cancer Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::brain", "label": "[M] Family Cancer Type:brain (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::breast", "label": "[M] Family Cancer Type:breast (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::cervical", "label": "[M] Family Cancer Type:cervical (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::colon", "label": "[M] Family Cancer Type:colon (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::eye", "label": "[M] Family Cancer Type:eye (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::leukemia", "label": "[M] Family Cancer Type:leukemia (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::liver", "label": "[M] Family Cancer Type:liver (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::prostate", "label": "[M] Family Cancer Type:prostate (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::stomach", "label": "[M] Family Cancer Type:stomach (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer_Type:M::::unknown", "label": "[M] Family Cancer Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer:F::::maternal", "label": "[F] Family Cancer:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer:F::::paternal", "label": "[F] Family Cancer:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer:F::::sibling", "label": "[F] Family Cancer:sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer:M::::maternal", "label": "[M] Family Cancer:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer:M::::paternal", "label": "[M] Family Cancer:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cancer:M::::sibling", "label": "[M] Family Cancer:sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac_Type:F::::chf", "label": "[F] Family Cardiac Type:chf (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac_Type:F::::heart_attack", "label": "[F] Family Cardiac Type:heart attack (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac_Type:F::::unknown", "label": "[F] Family Cardiac Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac_Type:M::::cad", "label": "[M] Family Cardiac Type:cad (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac_Type:M::::unknown", "label": "[M] Family Cardiac Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac:F::::maternal", "label": "[F] Family Cardiac:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac:F::::paternal", "label": "[F] Family Cardiac:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac:M::::maternal", "label": "[M] Family Cardiac:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Cardiac:M::::paternal", "label": "[M] Family Cardiac:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes_Type:F::::gestational", "label": "[F] Family Diabetes Type:gestational (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes_Type:F::::type_i", "label": "[F] Family Diabetes Type:type i (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes_Type:F::::type_ii", "label": "[F] Family Diabetes Type:type ii (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes_Type:F::::unknown", "label": "[F] Family Diabetes Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes_Type:M::::type_i", "label": "[M] Family Diabetes Type:type i (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes_Type:M::::type_ii", "label": "[M] Family Diabetes Type:type ii (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes_Type:M::::unknown", "label": "[M] Family Diabetes Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes:F::::maternal", "label": "[F] Family Diabetes:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes:F::::paternal", "label": "[F] Family Diabetes:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes:M::::maternal", "label": "[M] Family Diabetes:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes:M::::paternal", "label": "[M] Family Diabetes:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Diabetes:M::::sibling", "label": "[M] Family Diabetes:sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "C:SURV:Family_History_of_PTB:F::::", "label": "[F] Family History of PTB (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Family_History_of_PTB:M::::", "label": "[M] Family History of PTB (SURV:C)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Hypertension:F::::maternal", "label": "[F] Family Hypertension:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Hypertension:F::::paternal", "label": "[F] Family Hypertension:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Hypertension:F::::sibling", "label": "[F] Family Hypertension:sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Hypertension:M::::maternal", "label": "[M] Family Hypertension:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Hypertension:M::::paternal", "label": "[M] Family Hypertension:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Hypertension:M::::sibling", "label": "[M] Family Hypertension:sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Medical_History_Other:F::::maternal", "label": "[F] Family Medical History Other:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Medical_History_Other:F::::paternal", "label": "[F] Family Medical History Other:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Medical_History_Other:F::::sibling", "label": "[F] Family Medical History Other:sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Medical_History_Other:M::::maternal", "label": "[M] Family Medical History Other:maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Medical_History_Other:M::::paternal", "label": "[M] Family Medical History Other:paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Medical_History_Other:M::::sibling", "label": "[M] Family Medical History Other:sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Other_Type:F::::asthma", "label": "[F] Family Other Type:asthma (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Other_Type:F::::multiple_sclerosis", "label": "[F] Family Other Type:multiple sclerosis (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Other_Type:M::::asthma", "label": "[M] Family Other Type:asthma (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Other_Type:M::::cholesterolemia", "label": "[M] Family Other Type:cholesterolemia (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Other_Type:M::::hypercholesterolemia", "label": "[M] Family Other Type:hypercholesterolemia (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Other_Type:M::::hyperlipidemia", "label": "[M] Family Other Type:hyperlipidemia (SURV:B)", "Occured" : "Before"}
+{ "id": "C:CLIN:Family_Study_"id": F::::", "label": "[F] Family Study ID (CLIN", C"Occured" : ")	"}
+{ "id": "C:CLIN:Family_Study_"id": M::::", "label": "[M] Family Study ID (CLIN", C"Occured" : ")	"}
+{ "id": "C:CLIN:Family_Study_"id": NB::::", "label": "[NB] Family Study ID (CLIN", C"Occured" : ")	"}
+{ "id": "B:SURV:Family_Thyroid_Type:F::::hyperthyroidism", "label": "[F] Family Thyroid Type:hyperthyroidism (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyroid_Type:F::::hypothyroidism", "label": "[F] Family Thyroid Type:hypothyroidism (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyroid_Type:F::::unknown", "label": "[F] Family Thyroid Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyroid_Type:M::::graves", "label": "[M] Family Thyroid Type:graves (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyroid_Type:M::::hypothroidism", "label": "[M] Family Thyroid Type:hypothroidism (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyroid_Type:M::::hypothyroidism", "label": "[M] Family Thyroid Type:hypothyroidism (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyroid_Type:M::::unknown", "label": "[M] Family Thyroid Type:unknown (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyro"id": F::::maternal", "label": "[F] Family Thyro"id": maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyro"id": F::::sibling", "label": "[F] Family Thyro"id": sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyro"id": M::::maternal", "label": "[M] Family Thyro"id": maternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyro"id": M::::paternal", "label": "[M] Family Thyro"id": paternal (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Family_Thyro"id": M::::sibling", "label": "[M] Family Thyro"id": sibling (SURV:B)", "Occured" : "Before"}
+{ "id": "C:SURV:Fathers_Country_of_Birth:F::::", "label": "[F] Fathers Country of Birth (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Fathers_Country_of_Birth:M::::", "label": "[M] Fathers Country of Birth (SURV:C)", "Occured" : "Before"}
+{ "id": "C:CLIN:Fathers_Study_"id": F::::", "label": "[F] Fathers Study ID (CLIN", C"Occured" : ")	"}
+{ "id": "B:CLIN:Fetal_Demise:M::::", "label": "[M] Fetal Demise (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Fever_during_delivery:M::::", "label": "[M] Fever during delivery (CLIN:B)", "Occured" : "After"}
+{ "id": "N:SURV:Full_Term_Weeks:F::::", "label": "[F] Full Term Weeks (SURV:N)", "Occured" : "Before"}
+{ "id": "N:CLIN:Full_Term_Weeks:M::::", "label": "[M] Full Term Weeks (CLIN:N)", "Occured" : "Before"}
+{ "id": "B:CLIN:GBS_Positive:M::::", "label": "[M] GBS Positive (CLIN:B)", "Occured" : "During"}
+{ "id": "C:SURV:Gestational_Age_at_Time_of_Delivery:F::::", "label": "[F] Gestational Age at Time of Delivery (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Gestational_Age_at_Time_of_Delivery:M::::", "label": "[M] Gestational Age at Time of Delivery (SURV:C)", "Occured" : "Before"}
+{ "id": "N:CLIN:Gestational_Age_in_weeks_at_the_time_of_Delivery__Gestational_Age_in_days_at_the_time_of_Delivery:NB::::", "label": "[NB] Gestational Age in days (CLIN:N)", "Occured" : "After"}
+{ "id": "B:CLIN:Gestational_Diabetes:M::::", "label": "[M] Gestational Diabetes (CLIN:B)", "Occured" : "During"}
+{ "id": "N:CLIN:Gravida:M::::", "label": "[M] Gravida (CLIN:N)", "Occured" : "Before"}
+{ "id": "B:CLIN:HBV_During_Pregnancy:M::::", "label": "[M] HBV During Pregnancy (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:HPV:M::::", "label": "[M] HPV (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:HRP_Admission:M::::", "label": "[M] HRP Admission (CLIN:B)", "Occured" : "During"}
+{ "id": "C:CLIN:Has_the_Mother_Been_Diagnosed_with_a_Uterine_Anomaly:M::::", "label": "[M] Has the Mother Been Diagnosed with a Uterine Anomaly (CLIN:C)", "Occured" : "During"}
+{ "id": "C:SURV:Hazardous_Exposure_3_Months_Prior_to_Conception:F::::", "label": "[F] Hazardous Exposure 3 Months Prior to Conception (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Hazardous_Exposure_3_Months_Prior_to_Conception:M::::", "label": "[M] Hazardous Exposure 3 Months Prior to Conception (SURV:C)", "Occured" : "Before"}
+{ "id": "N:SURV:Height_Inches:M::::", "label": "[M] Height Inches (SURV:N)", "Occured" : "Before"}
+{ "id": "B:CLIN:Hellp:M::::", "label": "[M] Hellp (CLIN:B)", "Occured" : "During"}
+{ "id": "C:SURV:Hispanic_Origin:F::::", "label": "[F] Hispanic Origin (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Hispanic_Origin:M::::", "label": "[M] Hispanic Origin (SURV:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:Histopathology_done_on_Placenta/Cord:NB::::", "label": "[NB] Histopathology done on Placenta/Cord (CLIN:B)", "Occured" : "After"}
+{ "id": "C:SURV:History_of_Cancer:F::::", "label": "[F] History of Cancer (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:History_of_Cancer:M::::", "label": "[M] History of Cancer (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:History_of_Drug_Use:M::::", "label": "[M] History of Drug Use (SURV:C)", "Occured" : "Before"}
+{ "id": "B:SURV:Hypertension:M::::", "label": "[M] Hypertension (SURV:B)", "Occured" : "Before"}
+{ "id": "N:SURV:Income:F::::", "label": "[F] Income (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Income:M::::", "label": "[M] Income (SURV:N)", "Occured" : "Before"}
+{ "id": "B:CLIN:Incompetent_Shortened_Cervix:M::::", "label": "[M] Incompetent Shortened Cervix (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Infant_Admitted_to_NICU:NB::::", "label": "[NB] Infant Admitted to NICU (CLIN:B)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Birth_Location:NB::::", "label": "[NB] Infant Birth Location (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Congenital_Heart_Defect/Disease_Type:NB::::", "label": "[NB] Infant Congenital Heart Defect/Disease Type (CLIN:C)", "Occured" : "After"}
+{ "id": "B:CLIN:Infant_Diagnosis_with_Congenital_Anomaly:NB::::", "label": "[NB] Infant Diagnosis with Congenital Anomaly (CLIN:B)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Diagnosis_with_Gastrointestinal_issues:NB::::", "label": "[NB] Infant Diagnosis with Gastrointestinal issues (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Diagnosis_with_Retinopathy_of_Prematurity:NB::::", "label": "[NB] Infant Diagnosis with Retinopathy of Prematurity (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Discharged_with:NB::::", "label": "[NB] Infant Discharged with (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Gastrointestinal_Acquired_Type:NB::::", "label": "[NB] Infant Gastrointestinal Acquired Type (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Gastrointestinal_Type:NB::::", "label": "[NB] Infant Gastrointestinal Type (CLIN:C)", "Occured" : "After"}
+{ "id": "N:CLIN:Infant_Legth_of_Stay_in_Hospital_Days:NB::::", "label": "[NB] Infant Legth of Stay in Hospital Days (CLIN:N)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Respiratory_Support_Type:NB::::", "label": "[NB] Infant Respiratory Support Type (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_Seizures:NB::::", "label": "[NB] Infant Seizures (CLIN:C)", "Occured" : "After"}
+{ "id": "B:CLIN:Infant_Status_at_Time_of_Discharge:NB::::", "label": "[NB] Infant Status at Time of Discharge (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Infant_diagnosis_with_Congenital_Heart_Defect/Disease:NB::::", "label": "[NB] Infant diagnosis with Congenital Heart Defect/Disease (CLIN:B)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_diagnosis_with_Respiratory_Distress_Syndrome:NB::::", "label": "[NB] Infant diagnosis with Respiratory Distress Syndrome (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_have_Hypoxic-Ischemic_Encephalopathy:NB::::", "label": "[NB] Infant have Hypoxic-Ischemic Encephalopathy (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_have_Meconium_Aspiration:NB::::", "label": "[NB] Infant have Meconium Aspiration (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_have_Periventricular-Intraventriculare_Hemorrhage:NB::::", "label": "[NB] Infant have Periventricular-Intraventriculare Hemorrhage (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_have_Pneumothorax:NB::::", "label": "[NB] Infant have Pneumothorax (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_receive_Blood_Products:NB::::", "label": "[NB] Infant receive Blood Products (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infant_receive_Respiratory_Support:NB::::", "label": "[NB] Infant receive Respiratory Support (CLIN:C)", "Occured" : "After"}
+{ "id": "B:CLIN:Infant_received_Surfactant_Treatment:NB::::", "label": "[NB] Infant received Surfactant Treatment (CLIN:B)", "Occured" : "After"}
+{ "id": "N:CLIN:Infants_Apgar_Score_1_Minute:NB::::", "label": "[NB] Infants Apgar Score 1 Minute (CLIN:N)", "Occured" : "After"}
+{ "id": "N:CLIN:Infants_Apgar_Score_5_Minute:NB::::", "label": "[NB] Infants Apgar Score 5 Minute (CLIN:N)", "Occured" : "After"}
+{ "id": "B:CLIN:Infants_Birth_Location:NB::::", "label": "[NB] Infants Birth Location (CLIN:B)", "Occured" : "After"}
+{ "id": "N:CLIN:Infants_Discharge_Head_Circumference:NB::::", "label": "[NB] Infants Discharge Head Circumference (CLIN:N)", "Occured" : "After"}
+{ "id": "N:CLIN:Infants_Discharge_Weight_Grams:NB::::", "label": "[NB] Infants Discharge Weight Grams (CLIN:N)", "Occured" : "After"}
+{ "id": "N:CLIN:Infants_Discharge_Weight_Ounces:NB::::", "label": "[NB] Infants Discharge Weight Ounces (CLIN:N)", "Occured" : "After"}
+{ "id": "N:CLIN:Infants_Discharge_Weight_Pounds:NB::::", "label": "[NB] Infants Discharge Weight Pounds (CLIN:N)", "Occured" : "After"}
+{ "id": "B:CLIN:Infants_Gender:NB::::", "label": "[NB] Infants Gender (CLIN:B)", "Occured" : "After"}
+{ "id": "C:CLIN:Infants_Main_Food_Source_at_Hospital:NB::::", "label": "[NB] Infants Main Food Source at Hospital (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infants_Mode_of_Delivery:NB::::", "label": "[NB] Infants Mode of Delivery (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Infants_Study_"id": NB::::", "label": "[NB] Infants Study ID (CLIN", C"Occured" : ")	"}
+{ "id": "B:CLIN:Infection:M::::", "label": "[M] Infection (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Influenza_During_Pregnancy:M::::", "label": "[M] Influenza During Pregnancy (CLIN:B)", "Occured" : "During"}
+{ "id": "C:SURV:Known_Chromosomal_Abnormality:F::::", "label": "[F] Known Chromosomal Abnormality (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Known_Chromosomal_Abnormality:M::::", "label": "[M] Known Chromosomal Abnormality (SURV:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:Marital_Status:F::::", "label": "[F] Marital Status (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Marital_Status:M::::", "label": "[M] Marital Status (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Medical_Conditions_Controlled_by_Medications:M::::", "label": "[M] Medical Conditions Controlled by Medications (SURV:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Mode_of_Delivery:M::::", "label": "[M] Mode of Delivery (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Mode_of_Pregnancy:M::::", "label": "[M] Mode of Pregnancy (CLIN:B)", "Occured" : "Before"}
+{ "id": "N:SURV:Months_Drinking:F::::", "label": "[F] Months Drinking (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Months_Drinking:M::::", "label": "[M] Months Drinking (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Months_Smoking:F::::", "label": "[F] Months Smoking (SURV:N)", "Occured" : "Before"}
+{ "id": "C:SURV:Mothers_Country_of_Birth:F::::", "label": "[F] Mothers Country of Birth (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Mothers_Country_of_Birth:M::::", "label": "[M] Mothers Country of Birth (SURV:C)", "Occured" : "Before"}
+{ "id": "C:CLIN:Mothers_Study_"id": M::::", "label": "[M] Mothers Study ID (CLIN", C"Occured" : ")	"}
+{ "id": "B:SURV:No_Medical_Conditions_During_Pregnancy:M::::", "label": "[M] No Medical Conditions During Pregnancy (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:No_Vaccinations_During_Pregnancy:M::::", "label": "[M] No Vaccinations During Pregnancy (SURV:B)", "Occured" : "During"}
+{ "id": "N:CLIN:Number_of_Gestatations_During_Pregnancy:M::::", "label": "[M] Number of Gestatations During Pregnancy (CLIN:N)", "Occured" : "During"}
+{ "id": "C:SURV:Occupation:F::::", "label": "[F] Occupation (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Occupation:M::::", "label": "[M] Occupation (SURV:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:On_Antenatal_Steroids_during_Pregnancy:M::::", "label": "[M] On Antenatal Steroids during Pregnancy (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:On_Antibiotics_during_Pregnancy:M::::", "label": "[M] On Antibiotics during Pregnancy (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:On_Medication_during_Pregnancy:M::::", "label": "[M] On Medication during Pregnancy (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:On_Other_Medication_Type:M::::", "label": "[M] On Other Medication Type (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:On_Tocolytic_Therapy_during_Pregnancy:M::::", "label": "[M] On Tocolytic Therapy during Pregnancy (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Other_Infections_during_delivery:M::::", "label": "[M] Other Infections during delivery (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::advanced_maternal_age", "label": "[M] Other Medical Conditions:advanced maternal age (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::asthma", "label": "[M] Other Medical Conditions:asthma (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::bicornuate_uterus", "label": "[M] Other Medical Conditions:bicornuate uterus (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::breech", "label": "[M] Other Medical Conditions:breech (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::chlamydia", "label": "[M] Other Medical Conditions:chlamydia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::chorioamnionitis", "label": "[M] Other Medical Conditions:chorioamnionitis (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::depression", "label": "[M] Other Medical Conditions:depression (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::di-di_twins", "label": "[M] Other Medical Conditions:di-di twins (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::elevated_dopplers", "label": "[M] Other Medical Conditions:elevated dopplers (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::elevated_liver_enzymes", "label": "[M] Other Medical Conditions:elevated liver enzymes (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::fibroids", "label": "[M] Other Medical Conditions:fibroids (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::gc", "label": "[M] Other Medical Conditions:gc (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::gerd", "label": "[M] Other Medical Conditions:gerd (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::hiatal_hernia", "label": "[M] Other Medical Conditions:hiatal hernia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::hsv", "label": "[M] Other Medical Conditions:hsv (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::iugr", "label": "[M] Other Medical Conditions:iugr (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::low_lying_placenta", "label": "[M] Other Medical Conditions:low lying placenta (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::macrosomia", "label": "[M] Other Medical Conditions:macrosomia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::mono-di_twins", "label": "[M] Other Medical Conditions:mono-di twins (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::mthfr", "label": "[M] Other Medical Conditions:mthfr (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::nuchal_cord_x2", "label": "[M] Other Medical Conditions:nuchal cord x2 (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::oligohydramnios", "label": "[M] Other Medical Conditions:oligohydramnios (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::placenta_previa_resolved", "label": "[M] Other Medical Conditions:placenta previa resolved (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::polyhydramnios", "label": "[M] Other Medical Conditions:polyhydramnios (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::pprom", "label": "[M] Other Medical Conditions:pprom (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::pre-term_labor", "label": "[M] Other Medical Conditions:pre-term labor (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::proteinuria", "label": "[M] Other Medical Conditions:proteinuria (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::pupps", "label": "[M] Other Medical Conditions:pupps (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::rh_negative", "label": "[M] Other Medical Conditions:rh negative (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::subchorionic_hemorrhage", "label": "[M] Other Medical Conditions:subchorionic hemorrhage (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::thrombocytopenia", "label": "[M] Other Medical Conditions:thrombocytopenia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::twins", "label": "[M] Other Medical Conditions:twins (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Medical_Conditions:M::::uti", "label": "[M] Other Medical Conditions:uti (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Other_Vaccinations_during_Pregnancy:M::::depoprovera", "label": "[M] Other Vaccinations during Pregnancy:depoprovera (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Other_Vaccinations_during_Pregnancy:M::::mmr", "label": "[M] Other Vaccinations during Pregnancy:mmr (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Other_Vaccinations_during_Pregnancy:M::::rhogam", "label": "[M] Other Vaccinations during Pregnancy:rhogam (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Other_Vaccinations_during_Pregnancy:M::::rubella", "label": "[M] Other Vaccinations during Pregnancy:rubella (CLIN:B)", "Occured" : "During"}
+{ "id": "C:SURV:PTB_Type:F::::", "label": "[F] PTB Type (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:PTB_Type:M::::", "label": "[M] PTB Type (SURV:C)", "Occured" : "Before"}
+{ "id": "N:CLIN:Para:M::::", "label": "[M] Para (CLIN:N)", "Occured" : "Before"}
+{ "id": "B:CLIN:Placental_Histopathology_during_delivery_Findings:M::::acute_chorioamnionitis", "label": "[M] Placental Histopathology during delivery Findings:acute chorioamnionitis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Placental_Histopathology_during_delivery_Findings:M::::chorioamnionitis", "label": "[M] Placental Histopathology during delivery Findings:chorioamnionitis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Placental_Histopathology_during_delivery_Findings:M::::chronic_villitis", "label": "[M] Placental Histopathology during delivery Findings:chronic villitis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Placental_Histopathology_during_delivery_Findings:M::::intervillositis", "label": "[M] Placental Histopathology during delivery Findings:intervillositis (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Placental_Histopathology_during_delivery:M::::", "label": "[M] Placental Histopathology during delivery (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Placental_Previa/Abruption:M::::", "label": "[M] Placental Previa/Abruption (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::abnormal_pap_smear", "label": "[M] Pre-Existing Medical Conditions Other:abnormal pap smear (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::acl_repair", "label": "[M] Pre-Existing Medical Conditions Other:acl repair (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::advanced_maternal_age", "label": "[M] Pre-Existing Medical Conditions Other:advanced maternal age (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::anemia", "label": "[M] Pre-Existing Medical Conditions Other:anemia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::anxiety", "label": "[M] Pre-Existing Medical Conditions Other:anxiety (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::appendectomy", "label": "[M] Pre-Existing Medical Conditions Other:appendectomy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::asthma", "label": "[M] Pre-Existing Medical Conditions Other:asthma (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::beta_thalassemia_minor", "label": "[M] Pre-Existing Medical Conditions Other:beta thalassemia minor (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::bilateral_foot_surgery", "label": "[M] Pre-Existing Medical Conditions Other:bilateral foot surgery (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::bipolar_disorder", "label": "[M] Pre-Existing Medical Conditions Other:bipolar disorder (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::breast_augmentation", "label": "[M] Pre-Existing Medical Conditions Other:breast augmentation (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::breast_biopsy", "label": "[M] Pre-Existing Medical Conditions Other:breast biopsy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::bronchitis", "label": "[M] Pre-Existing Medical Conditions Other:bronchitis (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::c-section", "label": "[M] Pre-Existing Medical Conditions Other:c-section (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::cerclages", "label": "[M] Pre-Existing Medical Conditions Other:cerclages (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::cervical_dyplasia", "label": "[M] Pre-Existing Medical Conditions Other:cervical dyplasia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::cholecystectomy", "label": "[M] Pre-Existing Medical Conditions Other:cholecystectomy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::colposcopy", "label": "[M] Pre-Existing Medical Conditions Other:colposcopy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::cryotherapy", "label": "[M] Pre-Existing Medical Conditions Other:cryotherapy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::d&c", "label": "[M] Pre-Existing Medical Conditions Other:d&c (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::depression", "label": "[M] Pre-Existing Medical Conditions Other:depression (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::deviated_septum", "label": "[M] Pre-Existing Medical Conditions Other:deviated septum (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::di_di_twins", "label": "[M] Pre-Existing Medical Conditions Other:di di twins (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::ectopic_pregnancy", "label": "[M] Pre-Existing Medical Conditions Other:ectopic pregnancy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::factor_v", "label": "[M] Pre-Existing Medical Conditions Other:factor v (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::failed_cerclage", "label": "[M] Pre-Existing Medical Conditions Other:failed cerclage (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::fetal_demise", "label": "[M] Pre-Existing Medical Conditions Other:fetal demise (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::fibroadenoma_of_breast", "label": "[M] Pre-Existing Medical Conditions Other:fibroadenoma of breast (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::fibroids", "label": "[M] Pre-Existing Medical Conditions Other:fibroids (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::foot_surgery", "label": "[M] Pre-Existing Medical Conditions Other:foot surgery (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::gallbladder_surgery", "label": "[M] Pre-Existing Medical Conditions Other:gallbladder surgery (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::gerd", "label": "[M] Pre-Existing Medical Conditions Other:gerd (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::gestational_diabetes", "label": "[M] Pre-Existing Medical Conditions Other:gestational diabetes (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_abnormal_pap", "label": "[M] Pre-Existing Medical Conditions Other:h/o abnormal pap (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_asthma", "label": "[M] Pre-Existing Medical Conditions Other:h/o asthma (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_depression", "label": "[M] Pre-Existing Medical Conditions Other:h/o depression (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_hpv", "label": "[M] Pre-Existing Medical Conditions Other:h/o hpv (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_hsv", "label": "[M] Pre-Existing Medical Conditions Other:h/o hsv (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_infertility", "label": "[M] Pre-Existing Medical Conditions Other:h/o infertility (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_kidney_stones", "label": "[M] Pre-Existing Medical Conditions Other:h/o kidney stones (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_miscarriages", "label": "[M] Pre-Existing Medical Conditions Other:h/o miscarriages (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_ovarian_cyst", "label": "[M] Pre-Existing Medical Conditions Other:h/o ovarian cyst (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_pneumonia", "label": "[M] Pre-Existing Medical Conditions Other:h/o pneumonia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_pre-eclampsia", "label": "[M] Pre-Existing Medical Conditions Other:h/o pre-eclampsia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_ptl", "label": "[M] Pre-Existing Medical Conditions Other:h/o ptl (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_pyelonephritis", "label": "[M] Pre-Existing Medical Conditions Other:h/o pyelonephritis (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_spontaneous_abortion", "label": "[M] Pre-Existing Medical Conditions Other:h/o spontaneous abortion (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::h/o_uti", "label": "[M] Pre-Existing Medical Conditions Other:h/o uti (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::heart_murmur", "label": "[M] Pre-Existing Medical Conditions Other:heart murmur (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::herpes", "label": "[M] Pre-Existing Medical Conditions Other:herpes (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::hpv", "label": "[M] Pre-Existing Medical Conditions Other:hpv (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::hsv", "label": "[M] Pre-Existing Medical Conditions Other:hsv (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::hymenectomy", "label": "[M] Pre-Existing Medical Conditions Other:hymenectomy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::hypercholesterolemia", "label": "[M] Pre-Existing Medical Conditions Other:hypercholesterolemia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::hysteroscopy", "label": "[M] Pre-Existing Medical Conditions Other:hysteroscopy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::incompetent_cervix", "label": "[M] Pre-Existing Medical Conditions Other:incompetent cervix (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::infertility", "label": "[M] Pre-Existing Medical Conditions Other:infertility (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::iron_deficiency_anemia", "label": "[M] Pre-Existing Medical Conditions Other:iron deficiency anemia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::iufd", "label": "[M] Pre-Existing Medical Conditions Other:iufd (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::iugr", "label": "[M] Pre-Existing Medical Conditions Other:iugr (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::ivf", "label": "[M] Pre-Existing Medical Conditions Other:ivf (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::kidney_disease", "label": "[M] Pre-Existing Medical Conditions Other:kidney disease (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::kidney_stones", "label": "[M] Pre-Existing Medical Conditions Other:kidney stones (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::laparoscopy", "label": "[M] Pre-Existing Medical Conditions Other:laparoscopy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::liposuction", "label": "[M] Pre-Existing Medical Conditions Other:liposuction (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::marginal_placental_previa", "label": "[M] Pre-Existing Medical Conditions Other:marginal placental previa (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::migraine", "label": "[M] Pre-Existing Medical Conditions Other:migraine (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::mthfr", "label": "[M] Pre-Existing Medical Conditions Other:mthfr (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::multiple_sclerosis", "label": "[M] Pre-Existing Medical Conditions Other:multiple sclerosis (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::myomectomy", "label": "[M] Pre-Existing Medical Conditions Other:myomectomy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::no", "label": "[M] Pre-Existing Medical Conditions Other:no (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::ovarian_cyst", "label": "[M] Pre-Existing Medical Conditions Other:ovarian cyst (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::polycystic_ovary_syndrome", "label": "[M] Pre-Existing Medical Conditions Other:polycystic ovary syndrome (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::pre-eclampsia", "label": "[M] Pre-Existing Medical Conditions Other:pre-eclampsia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::psoriasis", "label": "[M] Pre-Existing Medical Conditions Other:psoriasis (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::pyelonephritis", "label": "[M] Pre-Existing Medical Conditions Other:pyelonephritis (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::r_knee_arthrscopy", "label": "[M] Pre-Existing Medical Conditions Other:r knee arthrscopy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::reflux", "label": "[M] Pre-Existing Medical Conditions Other:reflux (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::sab_&_d&c", "label": "[M] Pre-Existing Medical Conditions Other:sab & d&c (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::salpingectomy", "label": "[M] Pre-Existing Medical Conditions Other:salpingectomy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::sciatica", "label": "[M] Pre-Existing Medical Conditions Other:sciatica (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::scoliosis", "label": "[M] Pre-Existing Medical Conditions Other:scoliosis (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::shorten_cervix", "label": "[M] Pre-Existing Medical Conditions Other:shorten cervix (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::sickle_cell_trait", "label": "[M] Pre-Existing Medical Conditions Other:sickle cell trait (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::thalassemia", "label": "[M] Pre-Existing Medical Conditions Other:thalassemia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::thrombocytopenia", "label": "[M] Pre-Existing Medical Conditions Other:thrombocytopenia (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::tonsillectomy", "label": "[M] Pre-Existing Medical Conditions Other:tonsillectomy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::uterine_polypectomy", "label": "[M] Pre-Existing Medical Conditions Other:uterine polypectomy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::uti", "label": "[M] Pre-Existing Medical Conditions Other:uti (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::voluntary_interruption_of_pregnancy", "label": "[M] Pre-Existing Medical Conditions Other:voluntary interruption of pregnancy (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions_Other:M::::wisdom_teeth_extracted", "label": "[M] Pre-Existing Medical Conditions Other:wisdom teeth extracted (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions:M::::autoimmue_conditions", "label": "[M] Pre-Existing Medical Conditions:autoimmue conditions (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions:M::::cardiac", "label": "[M] Pre-Existing Medical Conditions:cardiac (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions:M::::diabetes", "label": "[M] Pre-Existing Medical Conditions:diabetes (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions:M::::hypertension", "label": "[M] Pre-Existing Medical Conditions:hypertension (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions:M::::no", "label": "[M] Pre-Existing Medical Conditions:no (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions:M::::other", "label": "[M] Pre-Existing Medical Conditions:other (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Conditions:M::::thyroid", "label": "[M] Pre-Existing Medical Conditions:thyroid (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Pre-Existing_Medical_Listed_Conditions:M::::lupus", "label": "[M] Pre-Existing Medical Listed Conditions:lupus (CLIN:B)", "Occured" : "Before"}
+{ "id": "N:CLIN:Pre-Pregnancy_BMI:M::::", "label": "[M] Pre-Pregnancy BMI (CLIN:N)", "Occured" : "Before"}
+{ "id": "N:CLIN:Pre-Pregnancy_Height_Inches:M::::", "label": "[M] Pre-Pregnancy Height Inches (CLIN:N)", "Occured" : "Before"}
+{ "id": "N:CLIN:Pre-Pregnancy_Weight:M::::", "label": "[M] Pre-Pregnancy Weight (CLIN:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Pre-Term_Weeks:F::::", "label": "[F] Pre-Term Weeks (SURV:N)", "Occured" : "Before"}
+{ "id": "N:CLIN:Pre-Term_Weeks:M::::", "label": "[M] Pre-Term Weeks (CLIN:N)", "Occured" : "Before"}
+{ "id": "B:CLIN:Preeclampsia/Eclampsia:M::::", "label": "[M] Preeclampsia/Eclampsia (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Pregnancy_Induced_Hypertension:M::::", "label": "[M] Pregnancy Induced Hypertension (CLIN:B)", "Occured" : "During"}
+{ "id": "C:CLIN:Prenatal_Care:M::::", "label": "[M] Prenatal Care (CLIN:C)", "Occured" : "During"}
+{ "id": "B:CLIN:Preterm:NB::::", "label": "[NB] Preterm (CLIN:B)", "Occured" : "Before"}
+{ "id": "C:CLIN:Previous_Cervical_Conization_or_Loop_Electrosurgical_Excision_Procedures:M::::", "label": "[M] Previous Cervical Conization or Loop Electrosurgical Excision Procedures (CLIN:C)", "Occured" : "Before"}
+{ "id": "N:CLIN:Prom_Number_of_Pregnancies:M::::", "label": "[M] Prom Number of Pregnancies (CLIN:N)", "Occured" : "Before"}
+{ "id": "C:CLIN:Prom_in_Previous_Pregnancies:M::::", "label": "[M] Prom in Previous Pregnancies (CLIN:C)", "Occured" : "Before"}
+{ "id": "B:CLIN:Prom:M::::", "label": "[M] Prom (CLIN:B)", "Occured" : "After"}
+{ "id": "B:SURV:Psychological_Stress_During_Pregnancy:M::::", "label": "[M] Psychological Stress During Pregnancy (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::change_in_residence", "label": "[M] Psychological Stress Types:change in residence (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::complications_with_your_current_pregnancy", "label": "[M] Psychological Stress Types:complications with your current pregnancy (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::current_partner_is_away_often", "label": "[M] Psychological Stress Types:current partner is away often (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::death_within_your_close_family", "label": "[M] Psychological Stress Types:death within your close family (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::family_disruption", "label": "[M] Psychological Stress Types:family disruption (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::loss_of_job_(you_or_your_partner)", "label": "[M] Psychological Stress Types:loss of job (you or your partner) (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::personal_health_problems", "label": "[M] Psychological Stress Types:personal health problems (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::personal_social_problems", "label": "[M] Psychological Stress Types:personal social problems (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::problems_with_current_partner", "label": "[M] Psychological Stress Types:problems with current partner (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::problems_with_your_finances", "label": "[M] Psychological Stress Types:problems with your finances (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::problems_with_your_in-laws", "label": "[M] Psychological Stress Types:problems with your in-laws (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::problems_with_your_own_children", "label": "[M] Psychological Stress Types:problems with your own children (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::problems_within_your_close_family", "label": "[M] Psychological Stress Types:problems within your close family (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::problems_within_your_work_environment", "label": "[M] Psychological Stress Types:problems within your work environment (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::serious_illness_in_your_close_family", "label": "[M] Psychological Stress Types:serious illness in your close family (SURV:B)", "Occured" : "During"}
+{ "id": "B:SURV:Psychological_Stress_Types:M::::work_transfer_(you_or_your_partner)", "label": "[M] Psychological Stress Types:work transfer (you or your partner) (SURV:B)", "Occured" : "During"}
+{ "id": "C:SURV:Race:F::::", "label": "[F] Race (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Race:M::::", "label": "[M] Race (SURV:C)", "Occured" : "Before"}
+{ "id": "C:CLIN:Reason_for_C-Section:M::::", "label": "[M] Reason for C-Section (CLIN:C)", "Occured" : "After"}
+{ "id": "C:CLIN:Receive_Initial_Resuscitation:NB::::", "label": "[NB] Receive Initial Resuscitation (CLIN:C)", "Occured" : "After"}
+{ "id": "B:CLIN:Receive_Medications_during_delivery:M::::", "label": "[M] Receive Medications during delivery (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Resuscitation_Type:NB::::cardiac_compression", "label": "[NB] Resuscitation Type:cardiac compression (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Resuscitation_Type:NB::::intubation/ppv", "label": "[NB] Resuscitation Type:intubation/ppv (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Resuscitation_Type:NB::::oxygen", "label": "[NB] Resuscitation Type:oxygen (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Resuscitation_Type:NB::::positive_pressure_mask", "label": "[NB] Resuscitation Type:positive pressure mask (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Resuscitation_Type:NB::::tracheal_suction", "label": "[NB] Resuscitation Type:tracheal suction (CLIN:B)", "Occured" : "After"}
+{ "id": "B:CLIN:Small_for_Gestational_Age:M::::", "label": "[M] Small for Gestational Age (CLIN:B)", "Occured" : "Before"}
+{ "id": "N:SURV:Smoking_Frequency:F::::", "label": "[F] Smoking Frequency (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Smoking_Frequency:M::::", "label": "[M] Smoking Frequency (SURV:N)", "Occured" : "Before"}
+{ "id": "C:SURV:Smoking_Status:F::::", "label": "[F] Smoking Status (SURV:C)", "Occured" : "Before"}
+{ "id": "C:SURV:Smoking_Status:M::::", "label": "[M] Smoking Status (SURV:C)", "Occured" : "Before"}
+{ "id": "B:SURV:Socio-Economic_Status_Declined:F::::", "label": "[F] Socio-Economic Status Declined (SURV:B)", "Occured" : "Before"}
+{ "id": "B:SURV:Socio-Economic_Status_Declined:M::::", "label": "[M] Socio-Economic Status Declined (SURV:B)", "Occured" : "Before"}
+{ "id": "C:CLIN:Spontaneous_Mode_of_Membrane_Rupture:M::::", "label": "[M] Spontaneous Mode of Membrane Rupture (CLIN:C)", "Occured" : "After"}
+{ "id": "B:CLIN:Tdap_During_Pregnancy:M::::", "label": "[M] Tdap During Pregnancy (CLIN:B)", "Occured" : "During"}
+{ "id": "N:CLIN:TermCategory:NB::::", "label": "[NB] TermCategory (CLIN:N)", "Occured" : "After"}
+{ "id": "B:CLIN:Thyro"id": M::::", "label": "[M] Thyroid (CLIN:B)", "Occured" : "Before"}
+{ "id": "B:CLIN:Ureaplasma:M::::", "label": "[M] Ureaplasma (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Uterine_Anomaly_Type:M::::bicornuate_uterus", "label": "[M] Uterine Anomaly Type:bicornuate uterus (CLIN:B)", "Occured" : "During"}
+{ "id": "B:CLIN:Vaginal_Bleeding_Spotting:M::::", "label": "[M] Vaginal Bleeding Spotting (CLIN:B)", "Occured" : "During"}
+{ "id": "C:CLIN:Was_the_Delivery_a_Result_of:M::::", "label": "[M] Was the Delivery a Result of (CLIN:C)", "Occured" : "After"}
+{ "id": "N:CLIN:Weight_Gain_During_Pregnancy:M::::", "label": "[M] Weight Gain During Pregnancy (CLIN:N)", "Occured" : "During"}
+{ "id": "N:CLIN:Weight:M::::", "label": "[M] Weight (CLIN:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Years_Drinking:F::::", "label": "[F] Years Drinking (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Years_Drinking:M::::", "label": "[M] Years Drinking (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Years_Smoking:M::::", "label": "[M] Years Smoking (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Zip_Code_of_Residence:F::::", "label": "[F] Zip Code of Residence (SURV:N)", "Occured" : "Before"}
+{ "id": "N:SURV:Zip_Code_of_Residence:M::::", "label": "[M] Zip Code of Residence (SURV:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_fraction_autozygous:F::::", "label": "[F] lax fraction autozygous (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_fraction_autozygous:M::::", "label": "[M] lax fraction autozygous (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_fraction_autozygous:NB::::", "label": "[NB] lax fraction autozygous (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:lax_length_of_autozygous_genome:F::::", "label": "[F] lax length of autozygous genome (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_length_of_autozygous_genome:M::::", "label": "[M] lax length of autozygous genome (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_length_of_autozygous_genome:NB::::", "label": "[NB] lax length of autozygous genome (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:lax_number_of_autozygous_blocks:F::::", "label": "[F] lax number of autozygous blocks (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_number_of_autozygous_blocks:M::::", "label": "[M] lax number of autozygous blocks (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_number_of_autozygous_blocks:NB::::", "label": "[NB] lax number of autozygous blocks (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:lax_number_of_autozygous_markers:F::::", "label": "[F] lax number of autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_number_of_autozygous_markers:M::::", "label": "[M] lax number of autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_number_of_autozygous_markers:NB::::", "label": "[NB] lax number of autozygous markers (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:lax_number_of_rare_autozygous_markers:F::::", "label": "[F] lax number of rare autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_number_of_rare_autozygous_markers:M::::", "label": "[M] lax number of rare autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:lax_number_of_rare_autozygous_markers:NB::::", "label": "[NB] lax number of rare autozygous markers (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:strict_fraction_autozygous:F::::", "label": "[F] strict fraction autozygous (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_fraction_autozygous:M::::", "label": "[M] strict fraction autozygous (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_fraction_autozygous:NB::::", "label": "[NB] strict fraction autozygous (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:strict_length_of_autozygous_genome:F::::", "label": "[F] strict length of autozygous genome (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_length_of_autozygous_genome:M::::", "label": "[M] strict length of autozygous genome (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_length_of_autozygous_genome:NB::::", "label": "[NB] strict length of autozygous genome (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:strict_number_of_autozygous_blocks:F::::", "label": "[F] strict number of autozygous blocks (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_number_of_autozygous_blocks:M::::", "label": "[M] strict number of autozygous blocks (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_number_of_autozygous_blocks:NB::::", "label": "[NB] strict number of autozygous blocks (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:strict_number_of_autozygous_markers:F::::", "label": "[F] strict number of autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_number_of_autozygous_markers:M::::", "label": "[M] strict number of autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_number_of_autozygous_markers:NB::::", "label": "[NB] strict number of autozygous markers (AZYG:N)", "Occured" : "After"}
+{ "id": "N:AZYG:strict_number_of_rare_autozygous_markers:F::::", "label": "[F] strict number of rare autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_number_of_rare_autozygous_markers:M::::", "label": "[M] strict number of rare autozygous markers (AZYG:N)", "Occured" : "Before"}
+{ "id": "N:AZYG:strict_number_of_rare_autozygous_markers:NB::::", "label": "[NB] strict number of rare autozygous markers (AZYG:N)", "Occured" : "After"}
+];
