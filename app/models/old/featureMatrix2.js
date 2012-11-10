@@ -16,13 +16,13 @@ module.exports = Model.extend({
     parse:function (tsv_text) {
         var tsv_rows = tsv_text.split("\n");
 
-        var COLUMNS = _.rest(_.first(tsv_rows).split("\t"), 1),
+        var COLUMNS = _.rest(tsv_rows[0].split("\t"), 1),
             ROWS = [],
             DATA = [];
 
         _.each(_.rest(tsv_rows, 1), function (tsv_row, tsv_row_idx) {
             var data_values = tsv_row.split("\t");
-            ROWS.push(_.first(data_values));
+            ROWS.push(data_values[0]);
             DATA[tsv_row_idx] = _.rest(data_values, 1);
         });
 

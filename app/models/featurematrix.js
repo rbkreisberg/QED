@@ -1,5 +1,5 @@
 //FeatureMatrix
-//managed 2d array (data).  Internal client-side only model for manipulation
+//managed 2d array (data).  Internal client-side only model for visualization of data
 
 var Model = require('./model.js');
 
@@ -10,8 +10,19 @@ FeatureMatrix = Model.extend({
 		transposed_data : new Array(), //key = case id, value = column index
 		row_map : new Object(), //key = feature id, value = row index
 		col_map : new Object() //key = case id, value = column index
-	}
+	},
 
+	getMatrix : function() {
+		return data;
+	},
+
+	getFeatures : function() {
+				_.chain(row_map)
+		   			.pairs()
+		   			.sortBy(function(f) {return f[1];})
+		   			.first()
+		   			.value();
+	},
 
 	getCases : function() { //return case ids in sorted order of index
 		return _.chain(col_map)
@@ -42,15 +53,15 @@ FeatureMatrix = Model.extend({
 			// for each row (feature)
 			_.each(matrix, function (row) { 
 				//for each column (case)
-				_.each(cases, function(case){
+				_.each(cases, function(c) {
 						//if the value is NA, remove the case
-						if (isNA(row[col_map[case]])) {
-							delete cases[case];
+						if (isNA(row[col_map[c]])) {
+							delete cases[c];
 						}
 				});
 			});
 				//returns the list of column indices to keep
-			var colsToKeep = _.map(cases, function(case) { return col_map[case];});
+			var colsToKeep = _.map(cases, function(c) { return col_map[c];});
 
 			//for each row (feature)
 			matrix = _.map(matrix, function(row,index){
@@ -66,10 +77,10 @@ FeatureMatrix = Model.extend({
 
 
 	getDataByCases: function getDataByCases(cases) {
-		return _.map(cases, function(case) { 
+		return _.map(cases, function(c) { 
 				return {
-							"case":case,
-							data:transposed_data[col_map[case]]
+							"case":c,
+							data:transposed_data[col_map[c]]
 				}})
 	},
 
@@ -79,6 +90,14 @@ FeatureMatrix = Model.extend({
 
 	cleanValue : function(val) {
 		return ((_.isUndefined(val) || _.isNull(val)) ? 'NA' : val);
+	},
+
+	selectFeature : function(feature) {
+		qed.RelationalMediator.triggerEvent(feature,'select',{});
+	},
+	
+	selectCase : function(c) {
+		qed.RelationalMediator.triggerEvent(c,'select',{});
 	}
 
 });

@@ -1,6 +1,6 @@
 var View = require('./view');
 var template = require('./templates/graph');
-var Graph = require('../models/graph');
+var Graph = require('../models/old/graph');
 var TreeChart = require('../vis/treeChart');
 var PC = require('./parcoords_view');
 

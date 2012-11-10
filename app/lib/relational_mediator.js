@@ -18,45 +18,19 @@ Backbone.RelationalMediator = (function(Backbone, _){
   _.extend(RelationalMediator.prototype, {
 
     //identify the general data type 
-    identifyFeatureType: function(/* args... */) {
+    identifyModelType: function(/* args... */) {
      
      return null;
     },
 
-    addModel  :function(model, feature_type) {
-    	var me = this;
-		if (_.isUndefined(feature_type)) {
-			feature_type = this.identifyFeatureType(model)
-		}
-		var rel_model = feature_type.findOrCreate(model.toJSON()));
-		this.models.add(rel_model);
-
-		me.binder.bindTo(model,'change', function(obj) {
-			rel_model.change();
-		}, this);
-
-		me.binder.bindTo(model,'selected', function(obj) {
-			rel_model.select();
-		}, this);
-
-		me.binder.bindTo(model,'hidden', function() {
-			rel_model.hide();
-		}, this);
-
-		me.binder.bindTo(model,'unhidden', function() {
-			rel_model.unhide();
-		}, this);
-
-		me.binder.bindTo(model,'destroy', function(){
-			rel_model.destroy();
-		}, this);
-	},
-
-	addCollection  : function(collection){
-		var modelType = this.identifyFeatureType(collection.at(0));
-		var addModel = function(model) { this.addModel(model,modelType);};
-		collection.each(addModel);
-	}
+    triggerEvent: function(obj,event,param) {
+    	var model_type = identifyModelType(obj);
+    	var model = new model_type();
+    	var instance = model.findOrCreate(obj,{create:false});
+    	if (instance && instance.triggerRelatedModels) {
+    		instance[event](param);
+    	}
+    }
    
   });
 

@@ -1,6 +1,6 @@
 var View = require('./view');
 var template = require('./templates/oncovis_cluster_property');
-var FeatureMatrix2 = require('../models/featureMatrix2');
+var FeatureMatrix2 = require('../models/old/featureMatrix2');
 
 module.exports = View.extend({
     model:FeatureMatrix2,

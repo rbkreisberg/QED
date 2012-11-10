@@ -10,13 +10,16 @@ Term = Backbone.RelationalModel.extend({
 	subModelTypes: {
 			'condition' : 'Condition',
 			'feature_label' : 'FeatureLabel'
-	}
+	},
+
 	relations: [
-			type: 'hasMany',
-			key : 'LiteratureTags',
-			relatedModel : 'LiteratureTag',
-			reverseRelation : {
-				key : 'term'
+			{
+				type: 'hasMany',
+				key : 'LiteratureTags',
+				relatedModel : 'LiteratureTag',
+				reverseRelation : {
+					key : 'term'
+				}
 			}
 	]
 });

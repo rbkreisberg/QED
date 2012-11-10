@@ -1,7 +1,7 @@
 var View = require('./view');
 var template = require('./templates/circ');
 var GFList = require('../models/genomic_featureList');
-var ChromInfoModel = require("../models/model_catalog");
+var ChromInfoModel = require("../models/old/model_catalog");
 var PC = require('./parcoords_view');
 
 module.exports = View.extend({

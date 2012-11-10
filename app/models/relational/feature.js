@@ -14,10 +14,10 @@ Feature = Model.extend({
 	// },
 	defaults: {
 		id:'',  //eg. C:GEXP:TP53:chr20:987232:14671982:-1:modifier
-		genomic: false
-		data_type:null  //C
+		genomic: false,
+		data_type:null,  //C
 		feature_type:null  //GEXP
-	}
+	},
 
 	label: function() {
 		return this.get('label');
@@ -55,18 +55,4 @@ Feature = Model.extend({
         }
     ],
 
-    //setup bindings to relations
-     initialize: function() {
-        this.bind('selected:label selected:measurement selected:association',function(obj){
-
-        });
-
-        this.bind('hidden:label hidden:measurement hidden:association',function(obj){
-
-        });
-
-        this.bind('unhidden:label unhidden:measurement unhidden:association',function(obj){
-
-        });
-    }
 });

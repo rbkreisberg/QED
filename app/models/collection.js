@@ -10,14 +10,8 @@ module.exports = Backbone.Collection.extend({
     },
 
     make_copy: function(CollectionClass, options) {
-        if (CollectionClass.prototype.add) {
-            // is this a collection
             var copy = new CollectionClass(options);
             copy.add(this.toJSON(), {silent:true});
             this.original_collection = copy;
-        } else {
-            //nope its a model
-            this.original_collection = new CollectionClass(this.toJSON());
-        }
     }
 });

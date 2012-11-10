@@ -1,12 +1,12 @@
-var Model = require('../models/model');
-var JSONModel = require("../models/model_json");
-var TableModel = require("../models/model_catalog");
-var GraphModel = require('../models/graph');
-var FeatureListModel = require('../models/featureList');
-var MutationsModel = require('../models/mutations');
-var GenomicFeatureListModel = require('../models/genomic_featureList');
-var FeatureMatrix2Model = require('../models/featureMatrix2');
-var FeatureMatrixModel = require('../models/featureMatrix');
+var Model = require('../models/old/model');
+var JSONModel = require("../models/old/model_json");
+var TableModel = require("../models/old/model_catalog");
+var GraphModel = require('../models/old/graph');
+var FeatureListModel = require('../models/old/featureList');
+var MutationsModel = require('../models/old/mutations');
+var GenomicFeatureListModel = require('../models/old/genomic_featureList');
+var FeatureMatrix2Model = require('../models/old/featureMatrix2');
+var FeatureMatrixModel = require('../models/old/featureMatrix');
 
 var DataMenuView = require("../views/data_menu");
 var MenuItemsView = require("../views/menu_items");
@@ -23,15 +23,12 @@ var VisViewClasses = {
 
 Controller = {
     loadQED:function () {
-        var featureLabelModel = new TableModel({ url:"svc/data/lookups/feature_labels" });
-        featureLabelModel.on("load", function() {
-            labels_lookup = featureLabelModel.get("itemsById");
-        });
-        featureLabelModel.standard_fetch();
-
-        Controller.ChromosomeModel = new TableModel({ url:"svc/data/lookups/chromosomes" });
-        Controller.ChromosomeModel.on("load", function() { Controller.ChromosomeModel.isReady = true; });
-        Controller.ChromosomeModel.standard_fetch();
+            //static json load
+            _.each(qed.lookups.feature_labels, function(f) {
+                labels_lookup[f.id] = f.label;
+            });
+        
+        Controller.ChromosomeModel = new TableModel(qed.lookups.chromosomes);
     },
 
     testwindow:{
@@ -97,7 +94,7 @@ Controller = {
     twod:{
         view:function (label1, label2) {
             var TwoD = require('../views/2D_Distribution_view');
-            var FL = require('../models/featureList');
+            var FL = require('../models/old/featureList');
             var fl = new FL({
                 websvc:'/endpoints/filter_by_id?filepath=%2Ffeature_matrices%2F2012_09_18_0835__cons&IDs=',
                 feature_list:[label1, label2]

@@ -1,5 +1,5 @@
 var View = require('./view');
-var Graph = require('../models/graph');
+var Graph = require('../models/old/graph');
 
 module.exports = View.extend({
 
