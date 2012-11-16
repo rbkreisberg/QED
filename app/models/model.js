@@ -19,14 +19,5 @@ module.exports = Backbone.Model.extend({
             //nope its a model
             this.original_collection = new ModelClass(this.toJSON());
         }
-    },
-
-    standard_fetch:function () {
-        this.fetch({
-            success:function (m) {
-                m.trigger('load');
-            }
-        });
-        return this;
     }
 });

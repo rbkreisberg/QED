@@ -1,13 +1,31 @@
-var Model = require('./model');
+var Interpro = Backbone.Model.extend({
+    initialize: function (options) {
+        _.extend(this, options);
+    },
 
-module.exports = Model.extend({
+    fetch: function() {
 
-	serviceRoot : 'svc',
-	serviceRead : '/data',
-	serviceDir :'/analysis/mutations',
+    },
 
-	url : function() {
-		return this.serviceRoot + this.serviceRead + this.serviceDir + '/' + this.get('dataset_id');
-	}
+    parse: function() {
 
+    }
+});
+
+module.exports = Backbone.Model.extend({
+    initialize: function (options) {
+        _.extend(this, options);
+    },
+
+    url: function () {
+        return this.data_uri;
+    },
+
+    fetch: function() {
+
+    },
+
+    parse: function() {
+
+    }
 });
