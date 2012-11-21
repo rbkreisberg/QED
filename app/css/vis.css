@@ -94,11 +94,11 @@ svg .ideogram .radial_lines {
     stroke-width:1.5px;
 }
 svg .wedge .background {
-	fill:#ddd;
+	fill:none;
 	stroke:#444;
 	opacity:0.6;
 }
-svg .wedge[data-ring="1"] .background {
+/*svg .wedge[data-ring="1"] .background {
 	fill:rgba(255,255,255,0.7);
 	stroke:none;
 	stroke-width:0;
@@ -112,7 +112,7 @@ svg .wedge[data-ring="1"] .background {
 svg .wedge[data-ring="2"] .background {
 	fill:rgba(200,200,200,0.4);
 	stroke-width:0;
-}
+}*/
 
 /*hovercard css */
 
@@ -191,3 +191,62 @@ svg .wedge[data-ring="2"] .background {
     color:rgb(240,10,10);
     cursor:pointer;
 }
+
+.stacksvis-container {
+    /*height:700px;*/
+    overflow: auto;
+}
+
+.match.PFAM {
+    fill: midnightblue;
+}
+
+.match.SMART {
+    fill: firebrick;
+}
+
+.match.PROFILE {
+    fill: darkorange;
+}
+
+.rotated_cell {
+    height: 100px;
+    vertical-align: bottom;
+}
+
+.rotate_text {
+    width: 15px;
+    -moz-transform: rotate(-60deg);
+    -moz-transform-origin: top left;
+    -webkit-transform: rotate(-60deg);
+    -webkit-transform-origin: top left;
+    -o-transform: rotate(-60deg);
+    -o-transform-origin: top left;
+}
+
+.cluster-label {
+    -moz-transform: rotate(-60deg);
+    -moz-transform-origin: top left;
+    -webkit-transform: rotate(-60deg);
+    -webkit-transform-origin: top left;
+    -o-transform: rotate(-60deg);
+    -o-transform-origin: top left;
+}
+
+
+i.icon-ucsc {
+    content: url('../icons/ucsc.png');
+}
+
+i.icon-cosmic {
+    content: url('../icons/cosmic.png');
+}
+
+i.icon-ensembl {
+    content: url('../icons/ensembl.png');
+}
+
+i.icon-mirBase {
+    content: url('../icons/mirbase.png');
+}
+

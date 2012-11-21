@@ -29,7 +29,7 @@ import uuid
 
 from auth_decorator import authenticated
 from data import LocalFileHandler
-from storage import MongoDbStorageHandler, GetUserinfo
+from storage import MongoDbLookupHandler, MongoDbPairwiseLookupHandler, MongoDbStorageHandler, GetUserinfo
 from oauth import GoogleOAuth2Handler, GoogleSignoutHandler
 
 define("data_path", default="../..", help="Path to data files")
@@ -40,6 +40,9 @@ define("client_secret", help="Client Secrets for Google OAuth2")
 define("config_file", help="Path to config file")
 define("authorized_users", default=[], help="List of authorized user emails")
 define("mongo_uri", default="mongodb://localhost:27017", help="MongoDB URI in the form mongodb://username:password@hostname:port")
+define("mongo_lookup_uri", default="mongodb://localhost:27018", help="Lookup MongoDB URI in the form mongodb://username:password@hostname:port")
+define("mongo_lookup_query_limit", default=1000, type=int, help="Lookup MongoDB limit on rows returned from query")
+define("mongo_pairwise_lookup_uri", default="mongodb://localhost:27018", help="Lookup MongoDB URI in the form mongodb://username:password@hostname:port")
 
 settings = {
     "debug": True,
@@ -78,8 +81,8 @@ class WhoamiHandler(tornado.web.RequestHandler):
 
         providers = []
         providers.append(google_provider)
-        providers.append({ "id": "facebook", "label": "Facebook", "active": False, "logo": "img/facebook_logo.jpg" })
-        providers.append({ "id": "twitter", "label": "Twitter", "active": False, "logo":"https://twitter.com/images/resources/twitter-bird-white-on-blue.png" })
+        # providers.append({ "id": "facebook", "label": "Facebook", "active": False, "logo": "img/facebook_logo.jpg" })
+        # providers.append({ "id": "twitter", "label": "Twitter", "active": False, "logo":"https://twitter.com/images/resources/twitter-bird-white-on-blue.png" })
 
         self.write({"providers":providers});
         self.set_status(200)
@@ -105,6 +108,8 @@ def main():
     logging.info("--client_host=%s" % options.client_host)
     logging.info("--authorized_users=%s" % options.authorized_users)
     logging.info("--mongo_uri=%s" % options.mongo_uri)
+    logging.info("--mongo_lookup_uri=%s" % options.mongo_lookup_uri)
+    logging.info("--mongo_lookup_query_limit=%s" % options.mongo_lookup_query_limit)
 
     if not options.config_file is None:
         logging.info("--config_file=%s" % options.config_file)
@@ -117,7 +122,9 @@ def main():
         (r"/auth/signout/google", GoogleSignoutHandler),
         (r"/auth/whoami", WhoamiHandler),
         (r"/auth/providers", AuthProvidersHandler),
-        (r"/storage/(.*)", MongoDbStorageHandler)
+        (r"/storage/(.*)", MongoDbStorageHandler),
+        (r"/lookups?(.*)", MongoDbLookupHandler),
+        (r"/pw_lookups?(.*)", MongoDbPairwiseLookupHandler)        
     ], **settings)
     application.listen(options.port, **server_settings)
     tornado.ioloop.IOLoop.instance().start()

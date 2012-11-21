@@ -1,6 +1,6 @@
 var View = require('./view');
 var template = require('./templates/graph_list');
-var GraphList = require('../models/old/graphList');
+var GraphList = require('../models/graphList');
 
 module.exports = View.extend({
 

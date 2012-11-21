@@ -1,10 +1,10 @@
 var View = require('./view');
 var template = require('./templates/grid');
-var FeatureMatrix = require('../models/featurematrix');
+var FeatureMatrix = require('../models/featureMatrix');
 
 module.exports = View.extend({
 
-  model:FeatureMatrix,
+  collection:FeatureMatrix,
   template:template,
 
   initialize : function() {
@@ -16,7 +16,7 @@ module.exports = View.extend({
   afterRender: function() {
   	var _this = this;
     this.$el.addClass('row-fluid');
-    this.model.bind('load',_this.renderGrid);
+    this.collection.bind('load',_this.renderGrid);
   },
 
   renderGrid : function(){
@@ -27,9 +27,9 @@ module.exports = View.extend({
 
     var ignore_columns = ['feature_id'];
 
-    var temp_cols = this.model.getCases();
+    var temp_cols = _.difference(this.collection.getHeaders(),(ignore_columns));
 
- //   temp_cols.splice(0, 0, temp_cols.splice(temp_cols.indexOf('label'), 1)[0]);  //move 'label' field to the front         
+    temp_cols.splice(0, 0, temp_cols.splice(temp_cols.indexOf('label'), 1)[0]);  //move 'label' field to the front         
 
     var width = function(idx) { return idx === 0 ? 320 : 60; }
     _.each(temp_cols, function(i,idx) {
@@ -75,11 +75,9 @@ module.exports = View.extend({
             return args.sortAsc ? result : -result;
         });
 
-        grid.onSelectedRangesChanged(function(rows){
-          _.each(rows, function(row) { qed.RelationalMediator.triggerEvent(row,'select');});
-        });
+        grid.onSelectedRangesChanged(function(rows){});
         
-      args.grid.invalidateAllRows();
+        args.grid.invalidateAllRows();
    		args.grid.render();
     });
 	}

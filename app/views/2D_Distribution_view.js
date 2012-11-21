@@ -1,6 +1,6 @@
 var View = require('./view');
 var template = require('./templates/twod');
-var FeatureList = require('../models/old/featureList');
+var FeatureList = require('../models/featureList');
 
 module.exports = View.extend({
 

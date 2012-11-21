@@ -1,15 +1,28 @@
 {
-	"proxy": [
-			
-	{	"url": "/svc",
-	        "host": "glados1",
-	        "port": 8006
-	 },
-
-	 {	"url": "/graph_layout",
-	        "host": "glados1",
-	        "port": 8010
-	 }
-	        ]
-	
+    "proxy":[
+        {
+            "url":"/svc/pw_lookups",
+            "rewrite_url":"http://genespot.cancerregulome.org",
+            "host":"genespot.cancerregulome.org",
+            "port": 80,
+            "keep_url": true
+        },
+        {
+            "url":"/svc/lookups",
+            "rewrite_url":"http://genespot.cancerregulome.org",
+            "host":"genespot.cancerregulome.org",
+            "port": 80,
+            "keep_url": true
+        },
+        {
+            "url":"/svc",
+            "host":"localhost",
+            "port": 8000
+        },
+        {
+            "url":"/graph_layout",
+            "host":"localhost",
+            "port":8010
+        }
+    ]
 }

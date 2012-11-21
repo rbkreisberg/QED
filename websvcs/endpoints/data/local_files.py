@@ -50,7 +50,14 @@ class LocalFileHandler(tornado.web.RequestHandler):
                 self.write({ "directories": dirs, "files": files })
             else:
                 rfile = open(options.data_path + filepath)
-                self.write(rfile.read())
+                while True:
+                    thisline = rfile.readline()
+                    if thisline.startswith("##"):
+                        continue
+                    else:
+                        self.write(thisline)
+                    self.write(rfile.read())
+                    break
                 rfile.close()
 
         except:

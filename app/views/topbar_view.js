@@ -4,6 +4,7 @@ var SignInModal = require("./templates/sign_in_modal");
 var SignInView = require("./sign_in");
 var SessionsView = require("./sessions_view");
 var HangoutLink = require("./templates/hangout_link");
+var AboutLink = require("./templates/about_link");
 
 module.exports = View.extend({
     id:'top-bar',
@@ -20,15 +21,26 @@ module.exports = View.extend({
 
     initialize:function (options) {
         _.extend(this, options);
-        _.bindAll(this, 'initSearchAutocomplete', 'addAutocompleteSource', 'initHangoutLink');
-
-        this.qedModel.on("load", this.initHangoutLink)
+        _.bindAll(this, 'initSearchAutocomplete', 'addAutocompleteSource', 'initHangoutLink', 'initAboutLinks');
+        _.defer(this.initHangoutLink);
+        _.defer(this.initAboutLinks);
     },
 
     initHangoutLink: function() {
-        var hangoutId = this.qedModel.get("hangoutId");
-        if (hangoutId) {
-            this.$el.find(".hangout-container").html(HangoutLink({ "hangoutId": hangoutId }));
+        var hangoutUrl = qed.Display.get("hangoutUrl");
+        if (hangoutUrl) {
+            this.$el.find(".hangout-container").html(HangoutLink({ "url": hangoutUrl }));
+        }
+    },
+
+    initAboutLinks: function() {
+        var aboutLinks = qed.Display.get("aboutLinks") || [];
+        if (!_.isEmpty(aboutLinks)) {
+            var UL = this.$el.find(".about-links");
+            UL.empty();
+            _.each(aboutLinks, function(aboutLink) {
+                UL.append(AboutLink(aboutLink));
+            });
         }
     },
 
@@ -36,6 +48,7 @@ module.exports = View.extend({
         this.initSearchAutocomplete();
         this.initSignIn();
 
+        this.$el.find(".titled").html(qed.Display.get("title") || "QED");
         this.$el.find(".sessions-container").html(this.sessionsView.render().el);
     },
 
