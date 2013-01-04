@@ -104,7 +104,7 @@ module.exports = View.extend({
 
         if (_.isEmpty(this.rowLabels)) {
             var rows = this.model.get("ROWS");
-            this.rowLabels = _.first(rows, (rows.length < 50) ? rows.length : 50);
+            this.rowLabels = _.first(rows, (rows.length < 500) ? rows.length : 500);
         }
 
         if (this.clusterProperty) {
@@ -148,8 +148,8 @@ module.exports = View.extend({
         });
 
         var optns = {
-            plot_width:1500,
-            plot_height:700,
+            plot_width:Math.max(1500,_this.model.get("COLUMNS").length * 4),
+            plot_height:Math.max(700,27*this.rowLabels.length),
             highlight_fill:colorbrewer.RdYlGn[3][2],
             color_fn:function (d) {
                 return d ? d.colorscale : "white";

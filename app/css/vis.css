@@ -197,3 +197,8 @@ svg .wedge[data-ring="2"] .background {
     height:700px;
     overflow: auto;
 }
+
+
+g.cluster-info {
+   font-size:10px;
+}
