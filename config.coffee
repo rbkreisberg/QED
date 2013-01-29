@@ -11,12 +11,13 @@ exports.config =
       order:
         before: [
           'vendor/js/console-helper.js',
-          'vendor/js/jquery-1.8.0.js',
+          'vendor/js/jquery-1.9.0.js',
           'vendor/js/bootstrap.js',
-          'vendor/js/underscore-1.4.2.js',
-          'vendor/js/backbone-0.9.2.js',
+          'vendor/js/underscore.js',
+          'vendor/js/backbone.js',
           'vendor/js/backbone-mediator.js',
-          'vendor/js/d3.v2.js',
+          'vendor/js/backbone.js',
+          'vendor/js/d3.v3.js',
           'vendor/js/vq.js'
         ]
         after: [
