@@ -3,6 +3,8 @@ module.exports = Backbone.Router.extend({
     routes:{
         '':'home_view',
         'twoD/:f1/:f2':'twod_view',
+        'scatterplot':'scatterplot_view',
+        'seqpeek':'seqpeek_view',
         'v/*uri/:view_name':'viewsByUri'
     },
 
@@ -20,7 +22,9 @@ module.exports = Backbone.Router.extend({
         "pwpv": require("../views/pwpv_view"),
         "twoD": require("../views/2D_Distribution_view"),
         "kde": null,
-        "parcoords": require("../views/parcoords_view")
+        "parcoords": require("../views/parcoords_view"),
+        "scatterplot": require("../views/scatterplot_view"),
+        "seqpeek": require("../views/seqpeek_view")
     },
 
     initTopNavBar:function() {
@@ -44,6 +48,18 @@ module.exports = Backbone.Router.extend({
         var CloudStorageView = require("../views/cloud_storage_view");
         var csview = new CloudStorageView({ $navbar:$('#navigation-container') });
         $(document.body).append(csview.render().el);
+    },
+
+    scatterplot_view:function () {
+        var Scatterplot = require('../views/scatterplot_view');
+        var scatterplotView = new Scatterplot();
+        this.$el.html(scatterplotView.render().el);
+    },
+
+    seqpeek_view:function () {
+        var SeqPeek = require('../views/seqpeek_view');
+        var seqpeekView = new SeqPeek();
+        this.$el.html(seqpeekView.render().el);
     },
 
     twod_view:function (label1, label2) {
@@ -73,10 +89,11 @@ module.exports = Backbone.Router.extend({
         var catalog = model_unit.catalog;
         var catalog_unit = catalog[dataset_id];
         var modelName = catalog_unit.model;
+        var serviceUri = catalog_unit.service || model_unit.service || "data/" + uri;
         var Model = qed.Models[modelName];
 
         var model_optns = {
-            "data_uri": "svc/data/" + uri,
+            "data_uri": "svc/" + serviceUri,
             "analysis_id": analysis_id,
             "dataset_id": dataset_id,
             "model_unit": model_unit,

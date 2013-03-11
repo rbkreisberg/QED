@@ -198,7 +198,18 @@ svg .wedge[data-ring="2"] .background {
     overflow: auto;
 }
 
-
 g.cluster-info {
    font-size:10px;
+}
+
+.match.PFAM {
+    fill: midnightblue;
+}
+
+.match.SMART {
+    fill: firebrick;
+}
+
+.match.PROFILE {
+    fill: darkorange;
 }
